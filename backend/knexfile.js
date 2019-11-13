@@ -1,27 +1,27 @@
 const { DB_URL } = process.env;
-const ENV = process.env.NODE_ENV || "development";
-const creds = ENV === "production" ? null : require("./db/config");
+const ENV = process.env.NODE_ENV || 'development';
+const creds = ENV === 'production' ? null : require('./db/config');
 
 const baseConfig = {
-  client: "pg",
+  client: 'pg',
   migrations: {
-    directory: "./db/migrations"
+    directory: './db/migrations'
   },
   seeds: {
-    directory: "./db/seeds"
+    directory: './db/seeds'
   }
 };
 
 const customConfig = {
   development: {
     connection: {
-      database: "messenger",
+      database: 'messenger',
       ...creds
     }
   },
   test: {
     connection: {
-      database: "messenger_test",
+      database: 'messenger_test',
       ...creds
     }
   },
