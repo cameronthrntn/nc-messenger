@@ -1,0 +1,17 @@
+.message {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.message-image {
+  width: 20%;
+}
+
+.message-image img {
+  width: 100%;
+}
+
+.message-contents {
+  width: 80%;
+}
