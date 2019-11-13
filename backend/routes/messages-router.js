@@ -1,8 +1,8 @@
-const messagesRouter = require("express").Router();
-const { getAllMessages, postMessage } = require("../controllers/messages");
+const messagesRouter = require('express').Router();
+const { getAllMessages, postMessage } = require('../controllers/messages');
 
 messagesRouter
-  .route("/")
+  .route('/')
   .get(getAllMessages)
   .post(postMessage);
 

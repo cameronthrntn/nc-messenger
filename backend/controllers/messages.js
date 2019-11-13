@@ -1,4 +1,4 @@
-const { selectAllMessages, insertMessage } = require("../models/messages");
+const { selectAllMessages, insertMessage } = require('../models/messages');
 
 exports.getAllMessages = (req, res, next) => {
   selectAllMessages().then(messages => {

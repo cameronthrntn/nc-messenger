@@ -1,4 +1,4 @@
-const { selectAllUsers, insertUser } = require("../models/users");
+const { selectAllUsers, insertUser } = require('../models/users');
 
 exports.getAllUsers = (req, res, next) => {
   selectAllUsers().then(users => {

@@ -1,16 +1,16 @@
-const { connection } = require("../db/connection");
+const { connection } = require('../db/connection');
 
 exports.insertMessage = body => {
-  console.log("model");
+  console.log('model');
 
   return connection
     .insert(body)
-    .into("messages")
-    .returning("*");
+    .into('messages')
+    .returning('*');
 };
 exports.selectAllMessages = () => {
-  return connection("messages")
-    .fullOuterJoin("users", "users.user_id", "messages.user_id")
-    .select("*")
-    .orderBy("posted", "asc");
+  return connection('messages')
+    .fullOuterJoin('users', 'users.user_id', 'messages.user_id')
+    .select('*')
+    .orderBy('posted', 'asc');
 };
