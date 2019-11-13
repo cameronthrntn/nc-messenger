@@ -1,9 +1,12 @@
+import React from 'react';
+import UserPage from './components/User-Page';
+import MainApp from './components/Main-App';
+import UserSignUp from './components/User-Sign-Up';
 import { subscribeToTimer } from './api';
 import React, { Component } from 'react';
-import UserList from './components/User-List';
-import MessageList from './components/Message-List';
 import MessageForm from './components/MessageForm';
 import './styles/App.css';
+import { Router } from '@reach/router';
 
 class App extends Component {
   state = {
@@ -15,8 +18,11 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <UserList />
-        <MessageList />
+      <Router className="App">
+        <MainApp path="/" />
+        <UserSignUp path="/signup" />
+        <UserPage path="/user/:user_id" />
+      </Router>
         <MessageForm />
         <p className="App-intro">
           This is the timer value: {this.state.timestamp}

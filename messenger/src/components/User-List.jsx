@@ -17,7 +17,7 @@ export default class UserList extends Component {
     const { users, isLoading } = this.state;
 
     return (
-      <ul className="UserList">
+      <ul className="users">
         {isLoading ? (
           <h1>Usernames Loading...</h1>
         ) : (
