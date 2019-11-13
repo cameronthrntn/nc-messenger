@@ -1,6 +1,6 @@
-const messagessRouter = require("express").Router();
-const { getAllMessages } = require("../controllers/messages");
+const messagesRouter = require('express').Router();
+const { getAllMessages } = require('../controllers/messages');
 
-usersRouter.get(getAllMessages);
+messagesRouter.route('/').get(getAllMessages);
 
-module.exports = usersRouter;
+module.exports = messagesRouter;
