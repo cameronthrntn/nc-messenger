@@ -1,15 +1,15 @@
 exports.up = function(knex) {
-  return knex.schema.createTable("users", usersTable => {
-    usersTable.increments("user_id").primary();
-    usersTable.string("username").notNullable();
+  return knex.schema.createTable('users', usersTable => {
+    usersTable.increments('user_id').primary();
+    usersTable.string('username').notNullable();
     usersTable
-      .string("avatar")
+      .string('avatar')
       .defaultTo(
-        "https://everydaynutrition.co.uk/wp-content/uploads/2015/01/default-user-avatar.png"
+        'https://everydaynutrition.co.uk/wp-content/uploads/2015/01/default-user-avatar.png'
       );
   });
 };
 
 exports.down = function(knex) {
-  return connection.schema.dropTable("users");
+  return knex.schema.dropTable('users');
 };
