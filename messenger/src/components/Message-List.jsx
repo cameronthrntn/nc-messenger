@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import '../styles/Message-List.css';
 import { getMessages } from '../utils/querying';
+import Message from './Message';
 
 export default class MessageList extends Component {
   state = {
@@ -9,6 +10,8 @@ export default class MessageList extends Component {
   };
   componentDidMount = async () => {
     const messages = await getMessages();    
+    console.log(messages);
+    
     this.setState({ messages, isLoading: false });
   };
   render() {
@@ -17,7 +20,7 @@ export default class MessageList extends Component {
     ) : (
       <ul className="messages">
         {this.state.messages.map(message => (
-          <li key={message.message_id}>{message.body}</li>
+          <Message key={message.message_id} message={message}/>
         ))}
       </ul>
     );
