@@ -15,13 +15,13 @@ const baseConfig = {
 const customConfig = {
   development: {
     connection: {
-      database: 'nc_news',
+      database: 'messenger',
       ...creds
     }
   },
   test: {
     connection: {
-      database: 'nc_news_test',
+      database: 'messenger_test',
       ...creds
     }
   },
