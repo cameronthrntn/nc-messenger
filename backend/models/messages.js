@@ -1,6 +1,8 @@
-const connection = require("../db/connection");
+const { connection } = require("../db/connection");
 
 exports.insertMessage = body => {
+  console.log("model");
+
   return connection
     .insert(body)
     .into("messages")
