@@ -7,7 +7,7 @@ exports.getAllUsers = (req, res, next) => {
 };
 
 exports.postUser = (req, res, next) => {
-  insertComment(req.body).then(user => {
+  insertUser(req.body).then(user => {
     res.status(201).send({ user: user[0] });
   });
 };
