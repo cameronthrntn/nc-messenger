@@ -2,6 +2,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  box-shadow: 1px 3px 5px rgb(189, 189, 189);
+
 }
 
 .message-image {
@@ -9,7 +11,9 @@
 }
 
 .message-image img {
-  width: 100%;
+  width: 80%;
+  border-radius: 50%;
+  box-shadow: 1px 3px 5px rgb(189, 189, 189);
 }
 
 .message-contents {
